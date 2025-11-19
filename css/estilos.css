@@ -42,9 +42,18 @@ body {
     margin-bottom: 20px;
 }
 
+/* Footer del logo */
+.footer-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
 .logo-footer {
-    width: 160px;            /* tamaño en pantallas grandes */
-    max-width: 60%;          /* adaptable en móviles */
+    width: 220px;            /* MÁS GRANDE en pantallas grandes */
+    max-width: 70%;          /* MÁS GRANDE en móviles normales */
     height: auto;
     opacity: 0.9;
     transition: opacity 0.3s ease;
@@ -54,11 +63,11 @@ body {
     opacity: 1;
 }
 
-/* 🔽 Ajuste EXTRA para móviles pequeños (tipo 360px o menos) */
+/* 🔽 Móviles pequeños (≤380px) */
 @media (max-width: 380px) {
     .logo-footer {
-        width: 120px;        /* más pequeño */
-        max-width: 50%;      /* aún más reducido en pantallas diminutas */
+        width: 150px;        /* un poco más grande que antes */
+        max-width: 65%;      /* más ancho en móviles pequeños */
         margin-bottom: 10px;
     }
 }
