@@ -37,21 +37,30 @@ body {
 .footer-logo {
     width: 100%;
     display: flex;
-    justify-content: center;  /* centra horizontalmente */
-    margin-top: 40px;         /* separación desde las últimas imágenes */
+    justify-content: center;
+    margin-top: 40px;
     margin-bottom: 20px;
 }
 
 .logo-footer {
-    width: 160px;             /* tamaño en PC */
-    max-width: 60%;           /* responsive en móvil */
+    width: 160px;            /* tamaño en pantallas grandes */
+    max-width: 60%;          /* adaptable en móviles */
     height: auto;
-    opacity: 0.9;             /* un toque elegante */
+    opacity: 0.9;
     transition: opacity 0.3s ease;
 }
 
 .logo-footer:hover {
     opacity: 1;
+}
+
+/* 🔽 Ajuste EXTRA para móviles pequeños (tipo 360px o menos) */
+@media (max-width: 380px) {
+    .logo-footer {
+        width: 120px;        /* más pequeño */
+        max-width: 50%;      /* aún más reducido en pantallas diminutas */
+        margin-bottom: 10px;
+    }
 }
 
 /* Ajuste especial para pantallas muy pequeñas */
