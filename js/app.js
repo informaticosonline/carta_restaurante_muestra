@@ -1,7 +1,7 @@
 const btnSubir = document.getElementById("btn-subir");
 
 window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
+    if (window.scrollY > 30) {
         btnSubir.style.display = "flex";
     } else {
         btnSubir.style.display = "none";
