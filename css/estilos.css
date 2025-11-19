@@ -39,7 +39,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;      /* Centra verticalmente también */
-    margin-top: 40px;
+    margin-top: 10px;
     margin-bottom: 20px;
 
     padding: 0;               /* evita desplazamientos */
