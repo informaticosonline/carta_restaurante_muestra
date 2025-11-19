@@ -33,6 +33,15 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
+/* Logo centrado */
+.logo {
+    display: block;
+    width: 180px;            /* tamaño del logo */
+    max-width: 70%;          /* se adapta a móviles */
+    height: auto;
+    margin: 20px auto 40px;  /* centra + espacio superior e inferior */
+}
+
 /* Ajuste especial para pantallas muy pequeñas */
 @media (max-width: 480px) {
     .carta-contenedor {
