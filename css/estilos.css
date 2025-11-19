@@ -1,37 +1,46 @@
-/* Fondo general limpio */
+/* Reinicio básico */
+* {
+    box-sizing: border-box;
+}
+
+/* Fondo general */
 body {
     margin: 0;
     padding: 0;
-    background: #f4f4f4;       /* gris suave */
+    background: #f4f4f4;
     font-family: Arial, sans-serif;
 }
 
 /* Contenedor centrado */
 .carta-contenedor {
     width: 100%;
-    max-width: 900px;          /* para que no se vea gigante en pantallas grandes */
-    margin: 0 auto;            /* centra el contenido */
+    max-width: 900px;     
+    margin: 0 auto;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* CENTRA LAS IMÁGENES */
 }
 
-/* Imágenes de la carta */
+/* Imágenes */
 .carta-imagen {
-    display: block;            /* evita espacios raros */
-    width: 100%;               /* ocupa todo el ancho disponible */
-    height: auto;              /* no se deforma */
-    margin-bottom: 20px;       /* separación entre imágenes */
-    border-radius: 8px;        /* bordes suaves opcionales */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* sombra suave */
+    width: 100%;              /* SE AJUSTAN AL ANCHO DEL MÓVIL */
+    max-width: 100%;          /* NUNCA SOBREPASAN EL CONTENEDOR */
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-/* Ajustes extra para móviles muy pequeños */
+/* Ajuste especial para pantallas muy pequeñas */
 @media (max-width: 480px) {
     .carta-contenedor {
         padding: 5px;
     }
-
     .carta-imagen {
         margin-bottom: 15px;
     }
 }
+
 
