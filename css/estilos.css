@@ -38,37 +38,35 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;      /* Centra verticalmente también */
     margin-top: 40px;
     margin-bottom: 20px;
+
+    padding: 0;               /* evita desplazamientos */
+    text-align: center;       /* refuerzo para móviles */
 }
 
-/* Footer del logo */
-.footer-logo {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-    margin-bottom: 20px;
-}
-
+/* Imagen del logo */
 .logo-footer {
-    width: 220px;            /* MÁS GRANDE en pantallas grandes */
-    max-width: 70%;          /* MÁS GRANDE en móviles normales */
+    width: 220px;             /* PC */
+    max-width: 70%;           /* móviles normales */
     height: auto;
     opacity: 0.9;
     transition: opacity 0.3s ease;
+    display: block;           /* evita que inline afecte alineación */
+    margin: 0 auto;           /* CENTRADO FORZADO */
 }
 
 .logo-footer:hover {
     opacity: 1;
 }
 
-/* 🔽 Móviles pequeños (≤380px) */
+/* Móviles pequeños (≤380px) */
 @media (max-width: 380px) {
     .logo-footer {
-        width: 150px;        /* un poco más grande que antes */
-        max-width: 65%;      /* más ancho en móviles pequeños */
-        margin-bottom: 10px;
+        width: 150px;
+        max-width: 65%;
+        margin: 20px auto 10px;  /* centrar con margen reforzado */
     }
 }
 
