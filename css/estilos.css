@@ -33,6 +33,14 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
+.fecha-actualizacion {
+    width: 100%;
+    text-align: center;
+    color: #01a1db;          /* 🔵 azul pedido */
+    font-size: 14px;
+    margin: 0 auto 30px auto;
+}
+
 /* Footer del logo */
 .footer-logo {
     width: 100%;
