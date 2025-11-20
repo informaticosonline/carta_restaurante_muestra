@@ -69,28 +69,28 @@ body {
     opacity: 1;
 }
 
-/* Botón para subir arriba */
 .btn-subir {
     position: fixed;
     bottom: 20px;
     right: 20px;
     width: 50px;
     height: 50px;
-    background: #000000cc;
-    color: white;
-    border: none;
+    background: rgba(1, 161, 219, 0.3);  /* 🔵 azul transparente */
+    color: #01a1db;                       /* 🔵 flecha azul sólida */
+    border: 2px solid #01a1db;            /* 🔵 borde azul bonito */
     border-radius: 50%;
     font-size: 22px;
-    display: none;             /* oculto hasta que se baja */
+    display: none;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     z-index: 9999;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease, background 0.3s ease;
 }
 
 .btn-subir:hover {
-    opacity: 0.8;
+    opacity: 1;
+    background: rgba(1, 161, 219, 0.5);   /* un poco menos transparente al pasar */
     transform: scale(1.1);
 }
 
