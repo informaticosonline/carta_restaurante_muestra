@@ -36,9 +36,12 @@ body {
 .fecha-actualizacion {
     width: 100%;
     text-align: center;
-    color: #01a1db;          /* 🔵 azul pedido */
+    color: #01a1db;
     font-size: 14px;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 10px auto;
+    font-family: 'Roboto Condensed', Arial, sans-serif; /* 🔵 NUEVA FUENTE */
+    font-weight: 300;  /* muy parecida a la minúscula de la imagen */
+    letter-spacing: 0.5px; /* un punto extra de claridad */
 }
 
 /* Footer del logo */
