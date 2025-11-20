@@ -12,14 +12,42 @@ btnSubir.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// --- Fecha automática ---
+// --- Fecha automática con día de la semana y mes en español ---
 const fechaElemento = document.getElementById("fecha-auto");
 
 if (fechaElemento) {
     const hoy = new Date();
-    const dia = hoy.getDate().toString().padStart(2, "0");
-    const mes = (hoy.getMonth() + 1).toString().padStart(2, "0");
+
+    const diasSemana = [
+        "Domingo",
+        "Lunes",
+        "Martes",
+        "Miércoles",
+        "Jueves",
+        "Viernes",
+        "Sábado"
+    ];
+
+    const meses = [
+        "enero",
+        "febrero",
+        "marzo",
+        "abril",
+        "mayo",
+        "junio",
+        "julio",
+        "agosto",
+        "septiembre",
+        "octubre",
+        "noviembre",
+        "diciembre"
+    ];
+
+    const diaSemana = diasSemana[hoy.getDay()];
+    const dia = hoy.getDate();
+    const mes = meses[hoy.getMonth()];
     const ano = hoy.getFullYear();
 
-    fechaElemento.textContent = `Actualizado: ${dia}-${mes}-${ano}`;
+    fechaElemento.textContent = `${diaSemana}, ${dia} de ${mes} de ${ano}`;
 }
+
