@@ -68,6 +68,30 @@ body {
     margin: 0 auto;           /* CENTRADO FORZADO */
 }
 
+/* Iconos SVG */
+.icono-svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icono-svg svg {
+    width: 22px;
+    height: 22px;
+    fill: white;  /* color del icono */
+}
+
+/* En el botón verde, el icono es blanco */
+.btn-whatsapp2 svg {
+    fill: white;
+}
+
+/* En el botón azul oscuro, el icono es blanco también */
+.btn-telefono svg {
+    fill: white;
+}
+
+
 .logo-footer:hover {
     opacity: 1;
 }
