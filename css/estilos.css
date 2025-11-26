@@ -68,6 +68,67 @@ body {
     margin: 0 auto;           /* CENTRADO FORZADO */
 }
 
+/* ================================
+   BOTONES DE CONTACTO (TEL + WHATSAPP)
+   ================================ */
+.contacto-botones {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 30px 0;
+    width: 100%;
+}
+
+.btn-contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 22px;
+    border-radius: 12px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    gap: 10px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+/* Botón llamar (azul oscuro estilo ejemplo) */
+.btn-telefono {
+    background-color: #0b2346;
+}
+
+/* Botón WhatsApp (verde oficial) */
+.btn-whatsapp2 {
+    background-color: #25d366;
+}
+
+/* Hover */
+.btn-contacto:hover {
+    opacity: 0.9;
+    transform: scale(1.03);
+}
+
+/* Iconos dentro del botón */
+.btn-contacto .icono-svg svg {
+    width: 22px;
+    height: 22px;
+    fill: white;
+}
+
+/* En móvil, uno debajo del otro */
+@media (max-width: 600px) {
+    .contacto-botones {
+        flex-direction: column;
+    }
+    .btn-contacto {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
 /* Iconos SVG */
 .icono-svg {
     display: flex;
