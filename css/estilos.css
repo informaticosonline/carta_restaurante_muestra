@@ -37,23 +37,16 @@ body {
     align-items: center;     /* 🔹 Centrar horizontalmente */
     margin: 20px auto 30px auto;
     padding: 10px 15px;
-    gap: 15px;              /* 🔹 Aumentar espacio entre elementos */
+    gap: 15px;              /* 🔹 Espacio entre elementos */
     text-align: center;     /* 🔹 Centrar texto */
 }
-
-/* Eliminar o comentar estas líneas que ya no son necesarias:
-.intro-presentacion {
-    justify-content: center; 
-    gap: 10px;
-}
-*/
 
 /* Contenedor de textos */
 .intro-texto {
     display: flex;
     flex-direction: column;
     gap: 2px;
-    text-align: center;     /* 🔹 Cambiar de right a center */
+    text-align: center;     /* 🔹 Centrar texto */
 }
 
 /* Añadir estas propiedades para el contenedor del logo */
@@ -64,11 +57,19 @@ body {
     gap: 10px;              /* 🔹 Espacio entre logo y texto */
 }
 
+/* Logo */
+.logo-intro {
+    width: 150px;           /* 🔹 Tamaño fijo para escritorio */
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* Texto debajo del logo */
 .intro-logo h1 {
     margin: 0;
     font-family: 'Roboto Condensed', Arial, sans-serif;
-    font-weight: 400;
+    font-weight: 400;      /* 🔹 Normal, no negrita */
     font-size: 20px;
     color: #333;
     text-align: center;
@@ -79,8 +80,7 @@ body {
    ============================= */
 @media (max-width: 700px) {
     .intro-presentacion {
-        flex-direction: column;  /* 🔹 Ya es columna, pero por si acaso */
-        gap: 15px;              /* 🔹 Espacio consistente */
+        gap: 15px;
     }
 
     .intro-texto h1 {
@@ -92,7 +92,7 @@ body {
     }
 
     .logo-intro {
-        width: 140px;          /* 🔹 Ajustar tamaño para móvil */
+        width: 130px;       /* 🔹 Tamaño para móvil */
     }
     
     /* Texto del logo en móvil */
