@@ -26,68 +26,61 @@ body {
 }
 
 /* ============================================================
-   INTRO PRESENTACIÓN (AJUSTE CENTRADO)
+   INTRO PRESENTACIÓN (AJUSTE CENTRADO) - VERSIÓN CORREGIDA
    ============================================================ */
+
 .intro-presentacion {
     width: 100%;
     max-width: 900px;
     display: flex;
-    justify-content: center;          /* Centra todo el conjunto */
-    align-items: center;
+    flex-direction: column;  /* 🔹 Cambiar a columna */
+    align-items: center;     /* 🔹 Centrar horizontalmente */
     margin: 20px auto 30px auto;
     padding: 10px 15px;
-    gap: 10px;                         /* 🔹 MENOS distancia texto-logo */
+    gap: 15px;              /* 🔹 Aumentar espacio entre elementos */
+    text-align: center;     /* 🔹 Centrar texto */
 }
+
+/* Eliminar o comentar estas líneas que ya no son necesarias:
+.intro-presentacion {
+    justify-content: center; 
+    gap: 10px;
+}
+*/
 
 /* Contenedor de textos */
 .intro-texto {
     display: flex;
     flex-direction: column;
-    gap: 2px;                          /* Textos más compactos */
-    text-align: right;                 /* Mejor alineación hacia el logo */
+    gap: 2px;
+    text-align: center;     /* 🔹 Cambiar de right a center */
 }
 
-/* Textos */
-.intro-texto h1,
-.intro-texto h2 {
+/* Añadir estas propiedades para el contenedor del logo */
+.intro-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* 🔹 Centrar horizontalmente */
+    gap: 10px;              /* 🔹 Espacio entre logo y texto */
+}
+
+/* Texto debajo del logo */
+.intro-logo h1 {
     margin: 0;
     font-family: 'Roboto Condensed', Arial, sans-serif;
     font-weight: 400;
-    letter-spacing: 0.5px;
+    font-size: 20px;
     color: #333;
-}
-
-.intro-texto h1 {
-    font-size: 34px;
-    color: #75391C;
-}
-
-.intro-texto h2 {
-    font-size: 26px;
-    color: #555;
-}
-
-/* Logo */
-.logo-intro {
-    width: 150px;
-    max-width: 100%;
-    height: auto;
-    display: block;
+    text-align: center;
 }
 
 /* =============================
-   RESPONSIVE (MÓVIL)
+   RESPONSIVE (MÓVIL) - CORREGIDO
    ============================= */
 @media (max-width: 700px) {
     .intro-presentacion {
-        flex-direction: column;
-        gap: 8px;
-        text-align: center;
-    }
-
-    .intro-texto {
-        text-align: center;
-        gap: 4px;
+        flex-direction: column;  /* 🔹 Ya es columna, pero por si acaso */
+        gap: 15px;              /* 🔹 Espacio consistente */
     }
 
     .intro-texto h1 {
@@ -99,10 +92,15 @@ body {
     }
 
     .logo-intro {
-        width: 130px;
+        width: 140px;          /* 🔹 Ajustar tamaño para móvil */
+    }
+    
+    /* Texto del logo en móvil */
+    .intro-logo h1 {
+        font-size: 18px;
+        padding: 0 10px;
     }
 }
-
 /* ============================================================
    IMÁGENES DE LA CARTA
    ============================================================ */
